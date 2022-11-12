@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&family=Open+Sans+Condensed:wght@300&display=swap');
+
+/*
+font-family: 'Noto Sans JP', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  filter: grayscale(100);
+}
+
+img:hover {
+  filter: grayscale(0);
+}
+
+body {
+ font-family: 'Open Sans Condensed', sans-serif; 
+  margin: 0;
+}
+
+header {
+  background: #589;
+  padding: 15px;
+  color: #f8f8ff;
+}
+
+header p {
+  font-weight: 600;
+}
+
+header a, footer a {
+  color: #ffa;
+  text-decoration: none;
+}
+
+header a:hover, footer a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+footer {
+  background: #666;
+  padding: 10px 25px;
+  color: #f8f8ff;
+}
+
+h1 {
+    font-family: 'Noto Sans JP', sans-serif;
+  font-size: 2.5rem;
+}
+
+h2::before {
+  content: "";
+  background: url('https://newtonvet.com/wp-content/uploads/2017/05/paw-icon.png');
+  background-size: cover;
+  display: inline-block;
+  width: 2.2rem;
+  height: 2.5rem;
+  padding: 1px 3px;
+  transform: translatey(0.75rem);
+}
+
+h2 {
+  font-family: 'Noto Sans JP', sans-serif;
+  margin-bottom: 0.5em;
+  font-size: 1.5rem;
+}
+
+.copy p {
+  margin-bottom: 0.5em;
+  line-height: 1.5em;
+}
+.copy p:last-child {
+  margin-bottom: 0;
+}
+
+.btn {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  padding: 10px 20px;
+  background: #589;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow .3s;
+  color: #fff;
+  }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.grid-item {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow .3s;
+}
+.grid-item a {
+  display: block;
+  color: #333;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+.grid-item .image {
+  height: 220px;
+}
+.grid-item .info {
+  background: #f8f8ff;
+  position: relative;
+  height: calc(100% - 220px);
+  padding: 25px 25px 86px 25px;
+}
+.grid-item .button-wrap {
+  display: block;
+  width: calc(100% - 50px);
+  bottom: 25px;
+}
+.grid-item:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+.grid-item:hover .btn {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+.grid-item:active .btn {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0);
+}
+
+.object-fit {
+  display: block;
+  width: 100%;
+  height: 100% !important;
+}
+.object-fit.cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.object-fit.contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media only screen and (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 650px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.button-favorites,.button-adopt{
+  padding:5px;
+  border: none;
+  border-radius: 5px;
+  background: #589;
+  color: white;
+  margin-top: 20px;
+}
+.button-favorites:hover, .button-adopt:hover{
+  background: gold;
+}

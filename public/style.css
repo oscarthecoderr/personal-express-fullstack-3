@@ -1,0 +1,155 @@
+body{
+  background-color: #ffffb3;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+.front-page-container{
+  display: flex;
+}
+.dog{
+ background-color: #fdb44e;
+ width: 120px;
+ height: 75px; 
+ border-radius: 0 0 0 120px;
+ margin-bottom: 140px;
+}
+.body{
+  background-color: #fdb44e;
+  position: relative;
+  width: 180px;
+  height: 100px;
+  top: 55px;
+  left: 70px;
+  border-radius: 0 0 0 70px;
+}
+.leg1,.leg2,.leg3,.leg4{
+  background-color: #fdb44e;
+  position: relative;
+  height: 50px;
+  width: 18px;
+}
+.leg1{
+  left: 100px;
+  top: 42px;
+}
+.leg2{
+  left: 130px;
+  bottom: 2px;
+}
+.leg3{
+  left: 205px;
+  bottom: 50px;
+}
+.leg4{
+  left: 232px;
+  bottom: 100px;
+}
+.tail{
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 100px solid #fdb44e;
+  position: relative;
+  bottom: 320px;
+  left: 230px;
+  transform: rotate(30deg);
+  transform-origin: bottom;
+  animation: wag 1s infinite;     
+}
+@keyframes wag{
+  50%{
+      transform: rotate(10deg);
+  }
+}
+.ear{
+  background-color: rgb(151,89,2,0.8);
+  width:45px;
+  height: 90px;
+  border-radius: 0 0 100px 100px;
+  position: relative;
+  bottom: 400px;
+  left: 75px;
+}
+.nose{
+  background-color: black;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: relative;
+  bottom: 492px;
+  right: 2px;
+}
+.eye{
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  border-radius: 50%;
+  bottom: 490px;
+  left: 50px;
+}
+.tongue{
+  background-color: tomato;
+  height: 30px;
+  width: 8px;
+  border-radius: 0 0 10px 10px;
+  position: relative;
+  bottom: 470px;
+  left: 30px;
+  transform: rotate(45deg);
+  z-index: -1;
+  animation: move 1s infinite;
+}
+@keyframes move{
+  50%{
+      transform: translate(2.5px,3px);
+  }
+}
+div.aside-logo{
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.get-started-container{
+  background-color: white;
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input{
+  width: 300px;
+  height: 40px;
+  font-family: 'Roboto Mono', monospace;
+}
+.button-get-started{
+  margin-top: 20px;
+  height: 55px;
+  width: 310px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6400e4;
+  cursor: pointer;
+  border: none;
+}
+.button-get-started{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+.button-get-started:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.3s;
+}
+.button-login{
+  text-decoration: none;
+  background-color: #fdb44e;
+  text-align: center;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <header>
+    <h1>Dogo Needs You!</h1>
+  </header>
+  <main>
+  <section class="grid">
+    <% for(let i = 0; i < dogs.length; i++){%>
+    <article class="grid-item">
+        <div class="image">
+          <img src="<%=dogs[i].src%>" class="object-fit cover">
+        </div>
+        <div class="info">
+          <h2><%= dogs[i].name %></h2>
+          <div class="copy">
+            <p><%= dogs[i].description %></p>
+          </div>
+          <div class="button-wrap">
+            <button class="button-favorites">Add to Favorites</button>
+          </div>
+        </div>
+    </article>
+  <%}%>
+  </section>
+  </main>
+
+  <header>
+    <h1>Your Favorites</h1>
+  </header>
+
+  <div>
+    <section class="grid">
+      <% for(let i = 0; i < favorites.length; i++){%>
+      <article class="grid-item">
+          <div class="info">
+            <h2><%= favorites[i].name %></h2>
+            <div class="copy">
+              <p><%= favorites[i].description %></p>
+            </div>
+            <div class="button-wrap" id="<%=favorites[i]._id %>">
+              <button class="button-adopt"><%=favorites[i].adopted ? 'ADOPTED!!' : 'Adopt'%></button>
+              <i class="fa fa-trash" aria-hidden="true"></i>
+            </div>
+          </div>
+      </article>
+    <%}%>
+    </section>
+  </div>
+  
+  <footer>Dogos Rule</footer>
+  <script src="https://kit.fontawesome.com/41069aef2b.js" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+</html>
