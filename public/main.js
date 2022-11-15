@@ -8,6 +8,7 @@ Array.from(favorite).forEach(function(element) {
       element.addEventListener('click', function(){
         const description=this.parentNode.parentNode.childNodes[3].innerText
         const name =this.parentNode.parentNode.childNodes[1].innerText
+        window.location.reload()
         fetch('adopt', {
           method: 'post',
           headers: {'Content-Type': 'application/json'},
@@ -21,7 +22,7 @@ Array.from(favorite).forEach(function(element) {
         })
         .then(data => {
           console.log(data)
-          window.location.reload(true)
+          
         })
       });
 });

@@ -78,7 +78,8 @@ module.exports = function(app, passport, db) {
       db.collection('adoption').save({name: req.body.name,description:req.body.description, email:req.user.local.email, adopted:false, }, (err, result) => {
         if (err) return console.log(err)
         console.log('saved to database')
-        res.redirect('/profile')
+        //res.redirect('/profile')
+        res.redirect(req.get('referer'));
       })
     })
 
